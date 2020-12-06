@@ -1,0 +1,4 @@
+curl -i -H "Content-type: application/json" -X GET localhost:8080/greeting
+
+curl -i -H "Content-type: application/json" -X POST -d '{"nomFormulaire" : "test nom","descFormulaire" : "test desc"}' localhost:8080/formulaire
+
