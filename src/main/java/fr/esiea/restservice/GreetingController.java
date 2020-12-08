@@ -1,10 +1,10 @@
-package com.example.restservice;
+package fr.esiea.restservice;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import com.example.Model.Formulaire;
+import fr.esiea.Model.Formulaire;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

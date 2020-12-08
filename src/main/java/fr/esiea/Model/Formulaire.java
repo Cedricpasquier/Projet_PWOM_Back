@@ -1,4 +1,4 @@
-package com.example.Model;
+package fr.esiea.Model;
 
 import java.util.Date;
 
