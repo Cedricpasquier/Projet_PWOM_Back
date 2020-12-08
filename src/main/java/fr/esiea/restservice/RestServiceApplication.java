@@ -1,3 +1,4 @@
+/*
 package fr.esiea.restservice;
 
 import org.springframework.boot.SpringApplication;
@@ -10,4 +11,4 @@ public class RestServiceApplication {
         SpringApplication.run(RestServiceApplication.class, args);
     }
 
-}
+}*/

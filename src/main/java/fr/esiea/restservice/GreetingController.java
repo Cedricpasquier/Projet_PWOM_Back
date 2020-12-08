@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-import fr.esiea.Model.Formulaire;
+import fr.esiea.models.Formulaire;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
