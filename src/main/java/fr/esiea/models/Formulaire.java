@@ -42,5 +42,5 @@ public class Formulaire {
         this.descFormulaire = descFormulaire;
     }
 
-
+    public Formulaire get
 }
