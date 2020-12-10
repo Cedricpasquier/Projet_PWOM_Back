@@ -32,8 +32,23 @@ public class GreetingController {
 	}
 
 	@GetMapping("/getform")
-	public Formulaire getFrom(@RequestParam(value = "id", defaultValue = "0") int id){
-		return
+	public Formulaire getFrom(){
+
+		Formulaire f = new Formulaire();
+		f.setId((int) nextId.incrementAndGet());
+		forms.add(f);
+		return f;
+	}
+
+	@GetMapping("/getthisform")
+	public Formulaire getFrom(@RequestParam String id){
+		int i = Integer.parseInt(id)-1;
+		return forms.get(i);
+	}
+
+	@GetMapping("/getallform")
+	public List<Formulaire> getAllFrom(){
+		return forms;
 	}
 
 }
