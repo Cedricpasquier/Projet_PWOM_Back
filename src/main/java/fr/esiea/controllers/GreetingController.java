@@ -1,13 +1,15 @@
-package fr.esiea.restservice;
+package fr.esiea.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import fr.esiea.models.Formulaire;
+import fr.esiea.restservice.Greeting;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class GreetingController {
 
 	private static final String template = "Hello, %s!";
@@ -21,12 +23,32 @@ public class GreetingController {
 	}
 
 
-	@PostMapping("/formulaire")
-	public Formulaire creatFormulaire(@RequestBody Formulaire formulaire) {
+	@PostMapping("/form")
+	public Formulaire creatForm(@RequestBody Formulaire form) {
 		//
-		formulaire.setId((int) nextId.incrementAndGet());
-		forms.add(formulaire);
-		return formulaire;
+		form.setId((int) nextId.incrementAndGet());
+		forms.add(form);
+		return form;
+	}
+
+	@GetMapping("/getform")
+	public Formulaire getFrom(){
+
+		Formulaire f = new Formulaire();
+		f.setId((int) nextId.incrementAndGet());
+		forms.add(f);
+		return f;
+	}
+
+	@GetMapping("/getthisform")
+	public Formulaire getFrom(@RequestParam String id){
+		int i = Integer.parseInt(id)-1;
+		return forms.get(i);
+	}
+
+	@GetMapping("/getallform")
+	public List<Formulaire> getAllFrom(){
+		return forms;
 	}
 
 }
