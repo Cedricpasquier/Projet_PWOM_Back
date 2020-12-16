@@ -5,15 +5,17 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import fr.esiea.models.Formulaire;
+import fr.esiea.models.Response;
 import fr.esiea.restservice.Greeting;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-public class GreetingController {
+public class SondageController {
 
 	private static final String template = "Hello, %s!";
 	private List<Formulaire> forms = new ArrayList<>();
+	private List<Response> responses = new ArrayList<>();
 	private AtomicLong counter = new AtomicLong();
 	private AtomicLong nextId = new AtomicLong();
 
@@ -49,6 +51,20 @@ public class GreetingController {
 	@GetMapping("/getallform")
 	public List<Formulaire> getAllFrom(){
 		return forms;
+	}
+
+	@PostMapping("/response")
+	public Response postResponse(@RequestBody Response rep) {
+
+		Response r = rep;
+		r.setId((int) nextId.incrementAndGet());
+		responses.add(rep);
+		return r;
+	}
+
+	@GetMapping("/getallresp")
+	public List<Response> getAllResp(){
+		return responses;
 	}
 
 }
