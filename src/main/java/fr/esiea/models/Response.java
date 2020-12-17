@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Response {
     private int id;
-    private Formulaire f;
+    private int formId;
     private String user;
     private ArrayList<String> responseDates;
 
@@ -23,12 +23,12 @@ public class Response {
         this.id = id;
     }
 
-    public Formulaire getF() {
-        return f;
+    public int getFormId() {
+        return formId;
     }
 
-    public void setF(Formulaire f) {
-        this.f = f;
+    public void setFormId(int f) {
+        this.formId = f;
     }
 
     public String getUser() {
