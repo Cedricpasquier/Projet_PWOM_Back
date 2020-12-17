@@ -7,8 +7,11 @@ import java.util.concurrent.atomic.AtomicLong;
 import fr.esiea.models.Formulaire;
 import fr.esiea.models.Response;
 import fr.esiea.restservice.Greeting;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
 public class SondageController {
@@ -24,10 +27,8 @@ public class SondageController {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
-
 	@PostMapping("/form")
 	public Formulaire creatForm(@RequestBody Formulaire form) {
-		//
 		form.setId((int) nextId.incrementAndGet());
 		forms.add(form);
 		return form;
