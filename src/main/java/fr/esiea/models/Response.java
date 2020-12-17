@@ -9,7 +9,7 @@ public class Response {
     private String user;
     private ArrayList<String> responseDates;
 
-    public SimpleDateFormat format = new SimpleDateFormat("dd-MM-yy");
+    //public SimpleDateFormat format = new SimpleDateFormat("dd-MM-yy");
 
     public Response(){
 
