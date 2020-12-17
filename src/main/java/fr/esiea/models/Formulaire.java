@@ -15,7 +15,8 @@ public class Formulaire {
     private String descFormulaire;
     private ArrayList<String> dates;
 
-    public SimpleDateFormat format = new SimpleDateFormat("dd-MM-yy");
+    //Not using the user timezone
+    //public SimpleDateFormat format = new SimpleDateFormat("dd-MM-yy");
 
 
     public Formulaire(){
