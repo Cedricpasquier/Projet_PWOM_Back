@@ -10,7 +10,7 @@ If you are using both project, specify a port for the spring boot application.
 
 ## Project requirement 
 
-This project use Java 15.0.1 and MySql Database for the login API.
+This project use Java 15.0.1 and MySql Database.
 
 ### Setup the database :
 
