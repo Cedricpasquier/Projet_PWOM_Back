@@ -58,14 +58,6 @@ public class Formulaire {
         return dates;
     }
 
-    public ArrayList<String> getUsersRepList() {
-        return usersRepList;
-    }
-
-    public void setUsersRepList(ArrayList<String> usersRepList) {
-        this.usersRepList = usersRepList;
-    }
-
 
 
 }
