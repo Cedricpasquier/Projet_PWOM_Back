@@ -32,7 +32,7 @@ We used the databe name : testdb
 
 ## Rest API 
 
-You have a list of json fomat to use for the back end in the folling file :
+You have a list of json fomat to use for the back end in the following file :
 
     "jsons format" located in docs/jsons format
 
