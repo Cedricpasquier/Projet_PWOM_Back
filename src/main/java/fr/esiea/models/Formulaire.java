@@ -13,7 +13,6 @@ public class Formulaire {
     private int id;
     private String nomFormulaire;
     private String descFormulaire;
-    private ArrayList<String> usersRepList;
     private ArrayList<String> dates;
 
     //Not using the user timezone
