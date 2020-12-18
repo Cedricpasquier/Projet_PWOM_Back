@@ -3,8 +3,10 @@
 This is the back end for our API school project.
 
 This project is composed of a Spring boot application for our REST API.
-The vue end is in this project : 
+The front end is in this project : [Front Project](https://github.com/Dedridec/Projet_PWOM_Front)
 
+If you are using both project, specify a port for the spring boot application.
+(VM option -Dserver.port=8081)
 
 ## Project requirement 
 
