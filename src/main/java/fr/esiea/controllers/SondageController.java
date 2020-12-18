@@ -52,6 +52,11 @@ public class SondageController {
 	public Response postResponse(@RequestBody Response rep) {
 
 		Response r = rep;
+		for(int k= 0; k < responses.size(); k++){
+			if (r.getUser().equals(responses.get(k).getUser())){
+				return r;
+			}
+		}
 		r.setId((int) counterRep.incrementAndGet());
 		responses.add(rep);
 		return r;
