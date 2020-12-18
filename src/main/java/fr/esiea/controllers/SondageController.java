@@ -6,7 +6,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import fr.esiea.models.Formulaire;
 import fr.esiea.models.Response;
-import fr.esiea.restservice.Greeting;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,13 +18,8 @@ public class SondageController {
 	private static final String template = "Hello, %s!";
 	private List<Formulaire> forms = new ArrayList<>();
 	private List<Response> responses = new ArrayList<>();
-	private AtomicLong counter = new AtomicLong();
+	private AtomicLong counterRep = new AtomicLong();
 	private AtomicLong nextId = new AtomicLong();
-
-	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
-	}
 
 	@PostMapping("/form")
 	public Formulaire creatForm(@RequestBody Formulaire form) {
@@ -58,7 +52,7 @@ public class SondageController {
 	public Response postResponse(@RequestBody Response rep) {
 
 		Response r = rep;
-		r.setId((int) nextId.incrementAndGet());
+		r.setId((int) counterRep.incrementAndGet());
 		responses.add(rep);
 		return r;
 	}
