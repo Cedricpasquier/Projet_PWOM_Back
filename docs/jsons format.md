@@ -75,4 +75,5 @@ You can get all responses for a specific user
 
 This GET require the user username in a String vaiable
 
+Example : /api/gethisresp?user=jean
  
