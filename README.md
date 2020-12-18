@@ -59,5 +59,5 @@ The token expire after 24 hours.
 Both the survey and all answer are saved only in memory, and not saved in the database.
 
 You can see all POST/GET method in this following file : 
-[Json Format](https://github.com/Dedridec/Projet_PWOM_Back/blob/Dev/docs/jsons%20format)
+[Json Format](https://github.com/Dedridec/Projet_PWOM_Back/blob/Dev/docs/jsons%20format.md)
 
