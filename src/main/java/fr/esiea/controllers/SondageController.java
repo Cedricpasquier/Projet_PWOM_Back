@@ -68,4 +68,15 @@ public class SondageController {
 		return responses;
 	}
 
+	@GetMapping("/gethisresp")
+	public List<Response> getResp(@RequestParam String user){
+		List<Response> userRep = new ArrayList<>();
+
+		for(int k = 0; k < responses.size() ; k++ ){
+			if (responses.get(k).getUser().equals(user))
+				userRep.add(responses.get(k));
+		}
+		return userRep;
+	}
+
 }

@@ -64,3 +64,15 @@ You can post a response with this format :
              "1940-12-10T15:11:18.882+0000"
          ]
  }
+ ## Get : Response
+ Insure you give the token for this post
+
+#### /api/getallresp
+This method will get all responses in memory 
+
+#### /api/gethisresp
+You can get all responses for a specific user
+
+This GET require the user username in a String vaiable
+
+ 
