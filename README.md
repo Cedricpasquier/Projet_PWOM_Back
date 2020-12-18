@@ -47,18 +47,18 @@ This file list all POST/GET method and what json format to use.
 #### Sign IN
 
 When a user create an account, his username and email are saved in the database. 
-His password is not sotred in the database. Using Spring Security, only the hash code is saved in the database.
+His password is not stored in the database. Using Spring Security, only the hash code is saved in the database.
 
 #### Sign UP
 
-When a user log in the app, we use spring secutity to check if the hash code match the hash code store in the database.
-If it the password is correct, the API send a toket to the user.
+When a user log in the app, we use spring security to check if the hash code match the hash code store in the database.
+If it the password is correct, the API send a token to the user.
 
 The token expire after 24 hours.
 
 ### Create or Reply to a survey
 
-Both the survey and all answer are saved only in memory, and not saved in the database.
+Both, the survey and all answer are saved only in memory, and not saved in the database.
 
 You can see all POST/GET method in this following file : 
 [Json Format](https://github.com/Dedridec/Projet_PWOM_Back/blob/Dev/docs/jsons%20format.md)
